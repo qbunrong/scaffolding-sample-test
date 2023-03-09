@@ -8,10 +8,9 @@ use Illuminate\Support\Facades\ParallelTesting;
 
 class TestServiceProvider extends ServiceProvider
 {
-    public function boot(){
+    public function boot()
+    {
         ParallelTesting::setUpTestDatabase(function ($database, $token) {
-            // Artisan::call("db:seed --class=DummyContentSeeder");
-
             Artisan::call("db:seed --class=ValidationSeeder");
             Artisan::call("db:seed --class=ItemSeeder");
             Artisan::call("db:seed --class=ComponentSeeder");

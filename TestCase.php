@@ -26,30 +26,18 @@ abstract class TestCase extends BaseTestCase
 
     protected UserRoleProvider $users;
 
-    protected function setUp(): void {
+    protected function setUp(): void
+    {
         $this->users = new UserRoleProvider();
 
         parent::setUp();
-
-        // $this->seed(ValidationSeeder::class);
-        // $this->seed(ItemSeeder::class);
-        // $this->seed(ComponentSeeder::class);
-        // $this->seed(DeliverableReceivableCategorySeeder::class);
-        // $this->seed(TemplateSeeder::class);
-        // $this->seed(ComponentItemLinkSeeder::class);
-        // $this->seed(DeliverySeeder::class);
-        // $this->seed(ReceiveSeeder::class);
-        // $this->seed(CommonItemSaveSeeder::class);
-        // $this->seed(PersonalItemSaveSeeder::class);
-        // $this->seed(UserSeeder::class);
-        // $this->seed(CommunitySeeder::class);
-        // $this->seed(CommunityAffiliationSeeder::class);
     }
 
     /**
      * Creates the application
      */
-    public function createApplication() {
+    public function createApplication()
+    {
         $app = require __DIR__ . '/../bootstrap/app.php';
         $app->register(TestServiceProvider::class);
         $app->make(Kernel::class)->bootstrap();
