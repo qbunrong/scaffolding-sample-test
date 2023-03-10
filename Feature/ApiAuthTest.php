@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Api;
+namespace Tests\Feature;
 
 use Tests\TestCase;
 
@@ -37,7 +37,4 @@ class DeliveryCategoryTest extends TestCase
         $res = $this->get($this->endpoint, ['Authorization' => 'Token in valid format 123']);
         $res->assertStatus(401);
     }
-
-    // public function test_token_expiry_checked(){}
-
 }

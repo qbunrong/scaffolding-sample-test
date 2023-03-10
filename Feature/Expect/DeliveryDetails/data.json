@@ -1,0 +1,146 @@
+{
+    "data": {
+        "is_deleted": false,
+        "user_can_edit": false,
+        "value": [
+            {
+                "component_id": 37,
+                "component_display_order": 1,
+                "can_be_added_with_same_component": 0,
+                "items": [
+                    {
+                        "item_id": 84,
+                        "display_order_in_component": 1,
+                        "item_name": "配信側の配信日時",
+                        "is_displayed_initially_field": 1,
+                        "is_required_field": 0,
+                        "placeholder": null,
+                        "input_type": "datetime",
+                        "limit_character_length": null,
+                        "limit_upload_size": null,
+                        "can_be_added_with_same_item": 0,
+                        "can_be_edited": 0,
+                        "task_no": null,
+                        "value": "2022-12-06T15:00:00Z"
+                    }
+                ]
+            },
+            {
+                "component_id": 1,
+                "component_display_order": 2,
+                "can_be_added_with_same_component": 0,
+                "items": [
+                    {
+                        "item_id": 1,
+                        "display_order_in_component": 1,
+                        "item_name": "配信カテゴリ",
+                        "is_displayed_initially_field": 1,
+                        "is_required_field": 1,
+                        "placeholder": null,
+                        "input_type": "text",
+                        "limit_character_length": 50,
+                        "limit_upload_size": null,
+                        "can_be_added_with_same_item": 0,
+                        "can_be_edited": 0,
+                        "task_no": 1,
+                        "value": "TODO"
+                    }
+                ]
+            },
+            {
+                "component_id": 2,
+                "component_display_order": 3,
+                "can_be_added_with_same_component": 0,
+                "items": [
+                    {
+                        "item_id": 2,
+                        "display_order_in_component": 1,
+                        "item_name": "対象コミュニティ",
+                        "is_displayed_initially_field": 1,
+                        "is_required_field": 1,
+                        "placeholder": null,
+                        "input_type": "community",
+                        "limit_character_length": null,
+                        "limit_upload_size": null,
+                        "can_be_added_with_same_item": 0,
+                        "can_be_edited": 0,
+                        "task_no": null,
+                        "value": [
+                            {
+                                "community": {
+                                    "id": 1,
+                                    "name": "Corwin-Monacan",
+                                    "image_url": "https://storage.googleapis.com/mc-portalapp-dev-backend-2/1/2023_03_02/64005db89f7f3/thumbnail_SampleJPGImage_5mbmb.jpg?GoogleAccessId=local-to-gcs%40unerry-pj-mc-portalapp-dev.iam.gserviceaccount.com&Expires=1678420941&Signature=cE%2FEX%2FKaz3zQBxIdOxgyclgWd%2F%2B5cC1HhGWTTwuDdQDXKF6fH5EBvdKasxIj9wJQT4GrZYDeamCiaZYmyKnptnwK9nzkOidppAOTADC%2BM66Pnm62B20Lj6TIsI%2Bo2iWjF%2BJKurLkwg%2F%2Bu9pbJK%2BNqfllpPCakp3KIUKMmJxJwrtO5gYCFGLmtSApl6plC2rNWdvvY1RoEqcOVHkcMoaAivqeVqVB7ck7P6s9NvyYW3uLSqjfXOo3eY2OnElMtY7sKyykK%2FY6XyKy2sM0GetkcYsMJqLxS%2BJvS1ywoeYV4QbNl1uXZeFP0oBVmqgHyNrtLkXM2dSNc5w9ieBOC59GzQ%3D%3D"
+                                },
+                                "members": [
+                                    {
+                                        "name": "Martina Johnston",
+                                        "user_id": 1,
+                                        "duplication_id": null
+                                    },
+                                    {
+                                        "name": "Cathrine Anderson",
+                                        "user_id": 2,
+                                        "duplication_id": null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component_id": 40,
+                "component_display_order": 4,
+                "can_be_added_with_same_component": 0,
+                "items": [
+                    {
+                        "item_id": 87,
+                        "display_order_in_component": 1,
+                        "item_name": "タスク名",
+                        "is_displayed_initially_field": 1,
+                        "is_required_field": 1,
+                        "placeholder": "100文字以内で入力してください",
+                        "input_type": "text",
+                        "limit_character_length": 100,
+                        "limit_upload_size": null,
+                        "can_be_added_with_same_item": 0,
+                        "can_be_edited": 1,
+                        "task_no": 1,
+                        "value": "運動会の準備"
+                    },
+                    {
+                        "item_id": 88,
+                        "display_order_in_component": 2,
+                        "item_name": "タスク内容",
+                        "is_displayed_initially_field": 1,
+                        "is_required_field": 1,
+                        "placeholder": "2000文字以内で入力してください",
+                        "input_type": "textarea",
+                        "limit_character_length": 2000,
+                        "limit_upload_size": null,
+                        "can_be_added_with_same_item": 0,
+                        "can_be_edited": 1,
+                        "task_no": 1,
+                        "value": "運動靴/体操/運動帽/水筒/お弁当箱/タオル"
+                    },
+                    {
+                        "item_id": 89,
+                        "display_order_in_component": 3,
+                        "item_name": "対応期限",
+                        "is_displayed_initially_field": 1,
+                        "is_required_field": 1,
+                        "placeholder": "YYYY/MM/DD HH:MM",
+                        "input_type": "datetime",
+                        "limit_character_length": null,
+                        "limit_upload_size": null,
+                        "can_be_added_with_same_item": 0,
+                        "can_be_edited": 1,
+                        "task_no": 1,
+                        "value": "2022-06-25T9:00:00Z"
+                    }
+                ]
+            }
+        ]
+    }
+}
