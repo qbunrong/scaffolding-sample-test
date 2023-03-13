@@ -24,4 +24,18 @@ class UserRoleProvider
         }
         return $this->member;
     }
+
+    public function newUser(): User
+    {
+        return User::factory()->create();
+    }
+
+    public function newUserWithRole(string $role): User
+    {
+        $user = User::factory()->hasCommunities()->create();
+        $user->communities[0]->pivot->community_role = $role;
+        $user->save();
+
+        return $user;
+    }
 }
