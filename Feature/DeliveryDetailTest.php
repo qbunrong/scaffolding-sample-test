@@ -6,11 +6,9 @@ use Tests\TestCase;
 
 class DeliveryDetailTest extends TestCase
 {
-    use TestApi;
-
     protected $endpoint = "api/deliveries/ids/8";
 
-    public function test_requests_succeed_with_leader_role()
+    public function testRequestsSucceedWithLeaderRole()
     {
         config(['app.env' => 'testing']);
 

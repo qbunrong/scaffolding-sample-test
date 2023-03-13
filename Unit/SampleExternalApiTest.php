@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Http;
 use App\Helpers\RequestHelper;
 use Tests\TestCase;
 
-class ExternalApiTest extends TestCase
+class SampleExternalApiTest extends TestCase
 {
-    public function test_get_menu_bbqs()
+    public function testGetMenuBbqs()
     {
         config(['joynet.token' => 'test']);
 

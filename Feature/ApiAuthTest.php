@@ -4,13 +4,11 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 
-class DeliveryCategoryTest extends TestCase
+class ApiAuthTest extends TestCase
 {
-    use TestApi;
-
     protected $endpoint = "api/deliveries/categories";
 
-    public function test_requests_succeed_with_leader_role()
+    public function testRequestsSucceedWithLeaderRole()
     {
         $this->actingAsApiLeader();
 
@@ -18,7 +16,7 @@ class DeliveryCategoryTest extends TestCase
         $res->assertStatus(200);
     }
 
-    public function test_requests_failed_with_member_role()
+    public function testRequestsFailedWithMemberRole()
     {
         $this->actingAsApiMember();
 
@@ -26,13 +24,13 @@ class DeliveryCategoryTest extends TestCase
         $res->assertStatus(403);
     }
 
-    public function test_no_token_throws_error()
+    public function testNoTokenThrowsError()
     {
         $res = $this->get($this->endpoint);
         $res->assertStatus(401);
     }
 
-    public function test_bad_token_format_throws_error()
+    public function testBadTokenTormatThrowsError()
     {
         $res = $this->get($this->endpoint, ['Authorization' => 'Token in valid format 123']);
         $res->assertStatus(401);

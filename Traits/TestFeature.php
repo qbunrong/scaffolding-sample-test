@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Traits;
 
-trait TestApi
+trait TestFeature
 {
     protected function actingAsApiLeader()
     {

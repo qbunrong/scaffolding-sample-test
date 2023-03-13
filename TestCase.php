@@ -3,13 +3,29 @@
 namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Tests\Helpers\TestServiceProvider;
-use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\Helpers\UserRoleProvider;
+use Tests\Traits\CreatesApplication;
+use Tests\Traits\TestFeature;
+
+use Database\Seeders\AdminSeeder;
+use Database\Seeders\CommonItemSaveSeeder;
+use Database\Seeders\CommunityAffiliationSeeder;
+use Database\Seeders\CommunitySeeder;
+use Database\Seeders\ComponentItemLinkSeeder;
+use Database\Seeders\ComponentSeeder;
+use Database\Seeders\DeliverableReceivableCategorySeeder;
+use Database\Seeders\DeliverySeeder;
+use Database\Seeders\ItemSeeder;
+use Database\Seeders\PersonalItemSaveSeeder;
+use Database\Seeders\ReceiveSeeder;
+use Database\Seeders\TemplateSeeder;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\ValidationSeeder;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication;
+    use CreatesApplication, RefreshDatabase, TestFeature;
 
     protected UserRoleProvider $users;
     protected string $joynet_api;
@@ -21,17 +37,24 @@ abstract class TestCase extends BaseTestCase
         parent::setUp();
 
         $this->joynet_api = config('joynet.joynet_api');
+        $this->seedTestingData();
     }
 
-    /**
-     * Creates the application
-     */
-    public function createApplication()
+    public function seedTestingData(): void
     {
-        $app = require __DIR__ . '/../bootstrap/app.php';
-        $app->register(TestServiceProvider::class);
-        $app->make(Kernel::class)->bootstrap();
-
-        return $app;
+        $this->seed(ValidationSeeder::class);
+        $this->seed(ItemSeeder::class);
+        $this->seed(ComponentSeeder::class);
+        $this->seed(DeliverableReceivableCategorySeeder::class);
+        $this->seed(TemplateSeeder::class);
+        $this->seed(ComponentItemLinkSeeder::class);
+        $this->seed(DeliverySeeder::class);
+        $this->seed(ReceiveSeeder::class);
+        $this->seed(CommonItemSaveSeeder::class);
+        $this->seed(PersonalItemSaveSeeder::class);
+        $this->seed(UserSeeder::class);
+        $this->seed(CommunitySeeder::class);
+        $this->seed(CommunityAffiliationSeeder::class);
+        $this->seed(AdminSeeder::class);
     }
 }

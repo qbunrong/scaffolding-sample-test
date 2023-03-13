@@ -11,15 +11,16 @@ class UserRoleProvider
 
     public function leader(): User
     {
-        if(is_null($this->leader)) {
-            $this->leader = User::getSystemRole('leader');
+        if (is_null($this->leader)) {
+            $this->leader = User::getUserRole('leader');
         }
         return $this->leader;
     }
 
-    public function member(): User {
-        if(is_null($this->member)) {
-            $this->member = User::getSystemRole('member');
+    public function member(): User
+    {
+        if (is_null($this->member)) {
+            $this->member = User::getUserRole('member');
         }
         return $this->member;
     }
